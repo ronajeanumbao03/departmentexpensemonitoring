@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Department Expenses Monitoring App</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -18,9 +18,13 @@
       theme: {
         extend: {
           colors: {
-            primary: '#2563eb',
-            secondary: '#10b981',
+            govBlue: '#1a4480',
+            govGold: '#ffcc00',
+            govGray: '#f0f0f0',
           },
+          fontFamily: {
+            sans: ['"Source Sans Pro"', 'sans-serif']
+          }
         },
       },
     };
@@ -28,87 +32,102 @@
 
   <style>
     body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #1e3a8a, #10b981);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background-color: #ffffff;
+      color: #1a1a1a;
+      font-family: "Source Sans Pro", sans-serif;
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(12px);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-      border-radius: 1rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
-    }
-
-    .btn-primary {
-      background-color: #2563eb;
+    header {
+      background-color: #1a4480;
       color: white;
-      transition: all 0.3s ease;
+      padding: 1rem 0;
     }
 
-    .btn-primary:hover {
-      background-color: #1e40af;
-      transform: scale(1.05);
+    header img {
+      height: 50px;
     }
 
-    .btn-outline {
-      border: 2px solid #2563eb;
-      color: #2563eb;
-      transition: all 0.3s ease;
-    }
-
-    .btn-outline:hover {
-      background-color: #2563eb;
+    .cta-button {
+      display: inline-block;
+      background-color: #1a4480;
       color: white;
-      transform: scale(1.05);
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      border-radius: 0.25rem;
+      transition: all 0.2s ease-in-out;
     }
 
-    .logo {
-      width: 120px;
-      height: auto;
-      margin: 0 auto 1rem;
+    .cta-button:hover {
+      background-color: #163b6d;
+    }
+
+    .secondary-button {
+      display: inline-block;
+      background-color: white;
+      color: #1a4480;
+      border: 2px solid #1a4480;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      border-radius: 0.25rem;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .secondary-button:hover {
+      background-color: #1a4480;
+      color: white;
+    }
+
+    footer {
+      background-color: #f0f0f0;
+      text-align: center;
+      padding: 1.5rem 0;
+      color: #333;
+      font-size: 0.9rem;
+      border-top: 4px solid #ffcc00;
     }
   </style>
 </head>
 
 <body>
-  <div class="px-6 sm:px-8 w-full max-w-lg">
-    <div class="card p-10 text-center">
-
-      <!-- Logo -->
-      <img src="images/DEMA-logo.png" alt="Logo" class="logo">
-
-      <!-- Heading -->
-      <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-        Welcome to the Department Expenses Monitoring App
-      </h1>
-
-      <!-- Subheading -->
-      <p class="text-lg text-gray-600 mb-6">
-        Track, analyze, and manage your department’s spending efficiently.
-      </p>
-
-      <!-- CTA Buttons -->
-      <div class="flex justify-center space-x-4">
-        <a href="login.html" class="btn-primary px-6 py-3 rounded-lg font-semibold text-lg shadow-md">Login</a>
-        <a href="register.html" class="btn-outline px-6 py-3 rounded-lg font-semibold text-lg">Register</a>
+  <!-- Header -->
+  <header class="shadow-md">
+    <div class="container mx-auto flex items-center justify-between px-6">
+      <div class="flex items-center space-x-3">
+        <img src="images/DEMA-logo.png" alt="Logo">
+        <h1 class="text-2xl font-semibold">Department Expenses Monitoring App</h1>
       </div>
-
-      <!-- Footer -->
-      <p class="text-sm text-gray-500 mt-8">
-        © 2025 Department Expenses Monitoring App. All rights reserved.
-      </p>
     </div>
-  </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container mx-auto py-16 px-6 text-center max-w-3xl">
+    <h2 class="text-4xl font-bold text-govBlue mb-4">
+      Manage Your Department’s Expenses Responsibly
+    </h2>
+    <p class="text-lg text-gray-700 mb-8">
+      Stay on top of departmental spending, budgeting, and financial reporting.
+      Track every expense with transparency and accountability — just like how preparedness starts with awareness.
+    </p>
+
+    <div class="space-x-4">
+      <a href="login.html" class="cta-button">Login</a>
+      <a href="register.html" class="secondary-button">Register</a>
+    </div>
+
+    <div class="mt-12 border-t border-gray-200 pt-6 text-left text-gray-600">
+      <h3 class="text-2xl font-semibold text-govBlue mb-2">Why Use This App?</h3>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Ensure transparency in departmental budgeting</li>
+        <li>Monitor spending trends and reports</li>
+        <li>Promote accountability and data-driven decisions</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Department Expenses Monitoring App — A transparency initiative for better governance.</p>
+  </footer>
 </body>
 
 </html>
