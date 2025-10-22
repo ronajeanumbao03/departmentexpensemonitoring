@@ -18,7 +18,7 @@ use App\Http\Controllers\UserBudgetController;
 use App\Http\Controllers\NotificationController;
 
 Route::get('/', function () {
-    return view('login');
+    return view('welcome');
 });
 
 Route::get('/dashboard', function () {
