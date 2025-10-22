@@ -108,11 +108,11 @@
       Stay on top of departmental spending, budgeting, and financial reporting.
       Track every expense with transparency and accountability — just like how preparedness starts with awareness.
     </p>
+<div class="space-x-4">
+    <a href="{{ route('login') }}" class="cta-button">Login</a>
+    <a href="{{ route('register') }}" class="secondary-button">Register</a>
+</div>
 
-    <div class="space-x-4">
-      <a href="login.html" class="cta-button">Login</a>
-      <a href="register.html" class="secondary-button">Register</a>
-    </div>
 
     <div class="mt-12 border-t border-gray-200 pt-6 text-left text-gray-600">
       <h3 class="text-2xl font-semibold text-govBlue mb-2">Why Use This App?</h3>
