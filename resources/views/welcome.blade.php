@@ -34,11 +34,12 @@
                 Welcome to the Department Expenses Monitoring App
             </h1>
 
-            <!-- Auth placeholder -->
+            <!-- Description -->
             <p class="text-xl text-gray-600 mb-4">
                 New here? Sign up or log in to start managing your department's expenses.
             </p>
 
+            <!-- Links -->
             <div class="space-x-4">
                 <a href="login.html"
                    class="inline-block text-teal-600 hover:text-teal-800 text-xl font-semibold transition duration-300">
